@@ -1,0 +1,12 @@
+#!/bin/rc
+if (~$#* 2)
+	for (f in *.$1)
+	{
+		nf=`[echo $f^.^$2}
+		mv $f $nf
+	}
+if not
+{
+	echo 2 arguments needed >[1=2]
+	exit ArgumentError
+}
